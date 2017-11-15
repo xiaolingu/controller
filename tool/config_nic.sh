@@ -7,9 +7,8 @@ if [ -e $exec_file ]; then
     echo "set cap_net_admin sucessfully..."
 else
     echo "Warning: ${exec_file} isn't exist..."
-    exit 1
 fi
-var=`ifconfig | grep "Link encap" | awk '{print $1}' | grep 'wlan'`
+var=`ifconfig | grep "Link encap" | awk '{print $1}' | grep 'wlx'`
 if [ [${var} == ' '] ];then
     echo "Warning: ${var} isn't exist ..."
     exit 0
